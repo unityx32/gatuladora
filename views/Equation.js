@@ -1,7 +1,8 @@
 import { View, Text, TextInput, Image, Button, StyleSheet, TouchableOpacity, ImageBackground } from "react-native"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { useFonts } from 'expo-font';
 import { LinearGradient } from "expo-linear-gradient";
+import { StatusBar } from 'expo-status-bar';
 
 export default function Equation() {
     const [a, setA] = useState(0.0)

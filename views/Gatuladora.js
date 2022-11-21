@@ -1,9 +1,9 @@
-import { View, Text, TextInput, Image, Button, StyleSheet, TouchableOpacity, ImageBackground } from "react-native"
-import { useState, useEffect } from "react"
+import { View, Text, Image, StyleSheet, TouchableOpacity, ImageBackground } from "react-native"
+import { useState } from "react"
 import { useFonts } from 'expo-font';
 import { LinearGradient } from "expo-linear-gradient";
 import { BlurView } from 'expo-blur';
-
+import { StatusBar } from 'expo-status-bar';
 
 export default function Gatuladora({ navigation }) {
     const [input, setInput] = useState('')
@@ -23,6 +23,7 @@ export default function Gatuladora({ navigation }) {
     const clear = () => {
         setInput(input.slice(0, -1))
     }
+
 
     const handleCalculation = (operation) => {
         setInput('')
@@ -315,7 +316,8 @@ const styles = StyleSheet.create({
 
     buttonsWrapper: {
         backgroundColor: 'rgba(192, 192, 192, .4)',
-        height: '70%'
+        height: '70%',
+        paddingBottom: 50
     },
 
     buttonRow: {
